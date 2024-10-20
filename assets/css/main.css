@@ -238,12 +238,16 @@ h6 {
   margin-right: 8px;
 }
 
-.header .logo h1 {
-  font-size: 30px;
+.dancing-script_site_name {
+  font-family: "Dancing Script", cursive;
+  font-size: 6vb;
   margin: 0;
-  font-weight: 700;
-  color: var(--heading-color);
-  font-family: var(--default-font);
+  font-weight: bolder;
+  /* Great Vibes, Dancing Script*/
+  font-optical-sizing: auto;
+  font-style: italic;
+  letter-spacing: 2px;
+  color: red;
 }
 
 .header .logo span {
