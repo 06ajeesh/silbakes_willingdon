@@ -925,23 +925,10 @@ section,
   color: color-mix(in srgb, var(--default-color), var(--contrast-color) 50%);
 }
 
-.about .content ul {
-  list-style: none;
-  padding: 0;
+.about .content p{
+  text-align: center;
 }
 
-.about .content ul li {
-  padding: 0 0 10px 30px;
-  position: relative;
-}
-
-.about .content ul i {
-  position: absolute;
-  font-size: 20px;
-  left: 0;
-  top: -3px;
-  color: var(--accent-color);
-}
 
 .about .content p:last-child {
   margin-bottom: 0;
