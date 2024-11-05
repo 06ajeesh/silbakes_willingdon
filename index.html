@@ -2038,76 +2038,62 @@
               data-aos="fade-up"
               data-aos-delay="200"
             >
+              
               <form
-                action="forms/book-a-table.php"
+                action="https://api.web3forms.com/submit"
                 method="post"
                 role="form"
                 class="php-email-form"
               >
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="48370e94-c81e-4884-8870-4df112e23a37"
+                />
                 <div class="row gy-4">
                   <div class="col-lg-4 col-md-6">
+                    Name
                     <input
                       type="text"
                       name="name"
                       class="form-control"
-                      id="name"
                       placeholder="Your Name"
-                      required=""
+                      required
                     />
                   </div>
                   <div class="col-lg-4 col-md-6">
+                    Email
                     <input
                       type="email"
-                      class="form-control"
                       name="email"
-                      id="email"
+                      class="form-control"
                       placeholder="Your Email"
-                      required=""
+                      required
                     />
                   </div>
                   <div class="col-lg-4 col-md-6">
+                    Phone
                     <input
                       type="text"
-                      class="form-control"
                       name="phone"
-                      id="phone"
+                      class="form-control"
                       placeholder="Your Phone"
-                      required=""
+                      required
                     />
                   </div>
                   <div class="col-lg-4 col-md-6">
+                    Date:
                     <input
                       type="date"
                       name="date"
                       class="form-control"
-                      id="date"
                       placeholder="Date"
-                      required=""
-                    />
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                    <input
-                      type="time"
-                      class="form-control"
-                      name="time"
-                      id="time"
-                      placeholder="Time"
-                      required=""
-                    />
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                    <input
-                      type="number"
-                      class="form-control"
-                      name="people"
-                      id="people"
-                      placeholder="# of people"
-                      required=""
                     />
                   </div>
                 </div>
 
                 <div class="form-group mt-3">
+                  Details
                   <textarea
                     class="form-control"
                     name="message"
@@ -2115,14 +2101,13 @@
                     placeholder="Message"
                   ></textarea>
                 </div>
+                <input type="hidden" name="subject" value="New Order Message from Silbakes Website">
+                <input type="hidden" name="redirect" value="https://06ajeesh.github.io/silbakes_willingdon/">
 
                 <div class="text-center mt-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">
-                    Your booking request was sent. We will call back or send an
-                    Email to confirm your reservation. Thank you!
-                  </div>
+                  <div class="loading" style="display: none">Loading...</div>
+                  <div class="error-message" style="display: none"></div>
+                  <!-- No success message now -->
                   <button type="submit">Order Cake</button>
                 </div>
               </form>
@@ -2132,8 +2117,6 @@
         </div>
       </section>
       <!-- /Book A Table Section -->
-
-
 
       <!-- Gallery Section -->
 
@@ -2277,9 +2260,6 @@
 
       <!-- /Gallery Section -->
 
-
-
-
       <!-- Contact Section -->
       <section id="contact" class="contact section">
         <!-- Section Title -->
@@ -2318,7 +2298,10 @@
                 <i class="icon bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Address</h3>
-                  <p>Willingdon Island, RNAS area, Qrts No. E 2/263, S.End, Kochi, Kerala 682003</p>
+                  <p>
+                    Willingdon Island, RNAS area, Qrts No. E 2/263, S.End,
+                    Kochi, Kerala 682003
+                  </p>
                 </div>
               </div>
             </div>
@@ -2373,13 +2356,20 @@
           </div>
 
           <form
-            action="forms/contact.php"
+            action="https://api.web3forms.com/submit"
             method="post"
             class="php-email-form"
             data-aos="fade-up"
             data-aos-delay="600"
           >
+            <input
+              type="hidden"
+              name="access_key"
+              value="48370e94-c81e-4884-8870-4df112e23a37"
+            />
+
             <div class="row gy-4">
+              <!-- Name Input -->
               <div class="col-md-6">
                 <input
                   type="text"
@@ -2390,6 +2380,7 @@
                 />
               </div>
 
+              <!-- Email Input -->
               <div class="col-md-6">
                 <input
                   type="email"
@@ -2400,6 +2391,7 @@
                 />
               </div>
 
+              <!-- Subject Input -->
               <div class="col-md-12">
                 <input
                   type="text"
@@ -2410,6 +2402,7 @@
                 />
               </div>
 
+              <!-- Message Textarea -->
               <div class="col-md-12">
                 <textarea
                   class="form-control"
@@ -2420,17 +2413,52 @@
                 ></textarea>
               </div>
 
+              <!-- Feedback Area -->
               <div class="col-md-12 text-center">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
+                <!-- Loading Spinner -->
+                <div class="loading">Loading...</div>
+
+                <!-- Success Message -->
                 <div class="sent-message">
-                  Your message has been sent. Thank you!
+                  <p class="success-icon">✓</p>
+                  <p>
+                    Your message has been sent successfully. Thank you for your
+                    submission!
+                  </p>
+                  <p><strong>Details:</strong></p>
+                  <ul class="confirmation-details">
+                    <!-- These will be populated dynamically -->
+                  </ul>
                 </div>
 
+                <!-- Error Message -->
+                <div class="error-message">
+                  <p class="error-icon">✘</p>
+                  <p>
+                    <strong>Error:</strong> Something went wrong. Please try
+                    again later.
+                  </p>
+                </div>
+
+                <!-- <input type="hidden" name="subject" value="Contact Message from Silbakes Website"> -->
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  class="hidden"
+                  style="display: none"
+                />
+                <input
+                  type="hidden"
+                  name="redirect"
+                  value="https://06ajeesh.github.io/silbakes_willingdon/"
+                />
+
+                <!-- Submit Button -->
                 <button type="submit">Send Message</button>
               </div>
             </div>
           </form>
+
           <!-- End Contact Form -->
         </div>
       </section>
@@ -2466,9 +2494,7 @@
             <i class="bi bi-clock icon"></i>
             <div>
               <h4>Opening Hours</h4>
-              <p>
-                <strong>24x7:</strong> <span>Anytime</span><br />
-              </p>
+              <p><strong>24x7:</strong> <span>Anytime</span><br /></p>
             </div>
           </div>
 
@@ -2512,7 +2538,6 @@
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -2520,5 +2545,13 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    <!-- form-validation.js -->
+    <script src="assets/js/form-validation.js"></script>
+    <script>
+      window.onload = function () {
+        // Reset the form fields when the page loads
+        document.getElementById("form").reset();
+      };
+    </script>
   </body>
 </html>
