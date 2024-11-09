@@ -6,6 +6,12 @@
     <title>Silbakes</title>
     <meta name="description" content="cake making" />
     <meta name="keywords" content="" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-store, no-cache, must-revalidate, max-age=0"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon" />
@@ -843,7 +849,6 @@
                   <p class="ingredients">#SBM081</p>
                 </div>
                 <!-- Menu Item -->
-
               </div>
             </div>
             <!-- End Starter Menu Content -->
@@ -1000,7 +1005,6 @@
               </div>
 
               <div class="row gy-5">
-
                 <div class="col-lg-4 menu-item">
                   <a
                     href="assets/img/birthday cakes special occasions fresh cream cake designs/cake_image_ (75).png"
@@ -2366,8 +2370,6 @@
                   <p class="ingredients">#SBB103</p>
                 </div>
                 <!-- Menu Item -->
-
-
               </div>
             </div>
 
@@ -2972,6 +2974,7 @@
                     <input
                       type="date"
                       name="date"
+                      autocomplete="off"
                       class="form-control"
                       placeholder="Date"
                     />
@@ -3266,6 +3269,7 @@
                   name="name"
                   class="form-control"
                   placeholder="Your Name"
+                  autocomplete="off"
                   required=""
                 />
               </div>
@@ -3277,6 +3281,7 @@
                   class="form-control"
                   name="email"
                   placeholder="Your Email"
+                  autocomplete="off"
                   required=""
                 />
               </div>
@@ -3288,6 +3293,7 @@
                   class="form-control"
                   name="subject"
                   placeholder="Subject"
+                  autocomplete="off"
                   required=""
                 />
               </div>
@@ -3300,6 +3306,7 @@
                   rows="6"
                   placeholder="Message"
                   required=""
+                  autocomplete="off"
                 ></textarea>
               </div>
 
@@ -3437,11 +3444,5 @@
     <script src="assets/js/main.js"></script>
     <!-- form-validation.js -->
     <script src="assets/js/form-validation.js"></script>
-    <script>
-      window.onload = function () {
-        // Reset the form fields when the page loads
-        document.getElementById("form").reset();
-      };
-    </script>
   </body>
 </html>
