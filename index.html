@@ -7,7 +7,6 @@
     <meta name="description" content="cake making" />
     <meta name="keywords" content="" />
 
-
     <meta
       http-equiv="Cache-Control"
       content="public, max-age=31536000, immutable"
@@ -17,18 +16,15 @@
     <link href="assets/img/favicon.png" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
 
-
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@400;700&family=Inter:wght@400;700&family=Amatic+SC:wght@400&display=swap"
       rel="stylesheet"
     />
-
 
     <link
       href="assets/vendor/bootstrap/css/bootstrap.min.css"
@@ -45,15 +41,12 @@
     />
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
 
-
     <link href="assets/css/main.css" rel="stylesheet" />
-
 
     <link rel="preload" href="assets/css/main.css" as="style" />
   </head>
@@ -657,8 +650,6 @@
                   <!-- <p class="price">₹90.95</p> -->
                 </div>
                 <!-- Menu Item -->
-
-                
 
                 <div class="col-lg-4 menu-item">
                   <a
@@ -2552,11 +2543,6 @@
       </section>
       <!-- /Testimonials Section -->
 
-
-
-
-     
-
       <!-- Book A Table Section -->
       <section id="book-a-table" class="book-a-table section">
         <!-- Section Title -->
@@ -2581,11 +2567,16 @@
               data-aos="fade-up"
               data-aos-delay="200"
             >
+
+
+
               <form
                 action="https://api.web3forms.com/submit"
                 method="post"
-                role="form"
+                id="form1"
                 class="php-email-form"
+                data-aos="fade-up"
+                data-aos-delay="600"
               >
                 <input
                   type="hidden"
@@ -2600,7 +2591,7 @@
                       name="name"
                       class="form-control"
                       placeholder="Your Name"
-                      required
+                      required=""
                     />
                   </div>
                   <div class="col-lg-4 col-md-6">
@@ -2610,7 +2601,7 @@
                       name="email"
                       class="form-control"
                       placeholder="Your Email"
-                      required
+                      required=""
                     />
                   </div>
                   <div class="col-lg-4 col-md-6">
@@ -2620,7 +2611,7 @@
                       name="phone"
                       class="form-control"
                       placeholder="Your Phone"
-                      required
+                      required=""
                     />
                   </div>
                   <div class="col-lg-4 col-md-6">
@@ -2651,19 +2642,40 @@
                 />
 
                 <div class="text-center mt-3">
-                  <div class="loading" style="display: none">Loading...</div>
-                  <div class="error-message" style="display: none"></div>
-                  <!-- No success message now -->
+                  <div class="loading">Loading...</div>
+                  
+                  <div class="error-message">
+                    <p class="error-icon">✘</p>
+                    <p>
+                      <strong>Error:</strong> Something went wrong. Please try
+                      again later.
+                    </p>
+                  </div>
+                  
+                  <div class="sent-message">
+                    <p class="success-icon">✓</p>
+                    <p>
+                      Your message has been sent successfully. Thank you for your
+                      Order!
+                    </p>
+                    <p><strong>Details:</strong></p>
+                    <ul class="confirmation-details">
+                      <!-- These will be populated dynamically -->
+                    </ul>
+                  </div>
+
                   <button type="submit">Order Cake</button>
                 </div>
               </form>
+
+
+
             </div>
             <!-- End Reservation Form -->
           </div>
         </div>
       </section>
       <!-- /Book A Table Section -->
-
 
       <!-- Contact Section -->
       <section id="contact" class="contact section">
@@ -2760,9 +2772,13 @@
             <!-- End Info Item -->
           </div>
 
+
+
+
           <form
             action="https://api.web3forms.com/submit"
             method="post"
+            id="form2"
             class="php-email-form"
             data-aos="fade-up"
             data-aos-delay="600"
@@ -2867,6 +2883,8 @@
               </div>
             </div>
           </form>
+
+          
 
           <!-- End Contact Form -->
         </div>
